@@ -32,4 +32,15 @@
 .case-list .case-content{
 	color: #666;
 	text-indent: 2em;
+	padding: 0 2em;
+	line-height: 2em;
+}
+.case-list .case-content h3{
+	text-align: center;
+	line-height: 2em;
+	margin-bottom: 3rem;
+}
+.case-list .case-content p{
+	line-height: 2em;
+	
 }
