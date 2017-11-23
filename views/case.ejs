@@ -1,0 +1,32 @@
+<%- include('components/header') %>
+<link rel="stylesheet" type="text/css" href="/css/case.css">
+<div class="item">
+
+	<div class="banner">
+		
+	</div>
+
+	<div class="container">
+		<div class="bread-nav">
+			<span class="bread-span">首页</span>
+			<span class="bread-span">></span>
+			<span class="bread-span">经典案例</span>
+			<span class="bread-span">></span>
+			<span class="bread-span nav-active"><%= post.title %></span>
+		</div>
+		<div class="case-lists">
+			<ul>		
+				<li class="case-list">
+					<h2 class="clearfloat">
+						<span class="tit-type"><%= post.type %></span><%= post.title %>
+						<span class="tit-date fr"><%= post.date %></span>
+					</h2>
+					<p class="case-content"><%= post.content %></p>
+
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+<%- include('components/footer') %>

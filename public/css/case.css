@@ -1,0 +1,35 @@
+.banner{
+	margin-top: 80px;
+	background-image: url(/img/ban-01.jpg);
+	height: 400px;
+	background-size: cover;
+	background-position: center;
+}
+
+.case-lists{
+	margin-bottom: 30px;
+}
+.case-list{
+	padding: 30px 20px;
+	border-radius: 6px;
+}
+.case-list:hover{
+	background-color: #eee;
+}
+.case-list h2{
+	color: #333;
+	margin-bottom: 20px;
+}
+.case-list .tit-type{
+	display: inline-block;
+	font-size: 16px;
+	background-color: #113DEE;
+	color: #fff;
+	border-radius: 4px;
+	padding: 6px 8px;
+	margin-right: 20px;
+}
+.case-list .case-content{
+	color: #666;
+	text-indent: 2em;
+}

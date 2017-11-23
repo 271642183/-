@@ -1,0 +1,66 @@
+.banner{
+	margin-top: 80px;
+	background-image: url(/img/ban-04.jpg);
+	height: 400px;
+	background-size: cover;
+	background-position: center;
+}
+
+.work-class-lists{
+	width: 80%;
+	margin-left: 20%;
+	margin-bottom: 30px;
+}
+.work-class-list{
+	
+	padding: 30px 20px;
+	border-radius: 6px;
+	background-color: #eee;
+	margin-bottom: 20px;
+}
+.work-class-list:hover{
+	background-color: #e0e0e0;
+}
+.work-class-list h2{
+	color: #333;
+	padding-left: 2rem;
+	margin-bottom: 20px;
+}
+
+.work-class-list .work-class-content{
+	color: #666;
+	line-height: 2em;
+	padding-left: 4rem;
+	padding-right: 3rem;
+}
+
+.work-class-navs{
+	background-color: #eee;
+	border-radius: 6px;
+	position: absolute;
+	width: 15%;
+	text-align: center;
+}
+.work-class-navs.active{
+	position: fixed;
+	top:80px;
+}
+.work-class-navs.active.activeB{
+	position: absolute;
+	top: auto;
+	bottom: 20px;
+}
+.work-class-nav-tit{
+	border-radius:  6px 6px 0 0; 
+	background-color: #113DEE;
+	padding: 1rem 0;
+	color: #fff;
+}
+.work-class-nav a{
+	display: block;
+	padding: .6rem 0;
+	color: #555;
+}
+.work-class-nav a:hover{
+	color: #113DEE;
+}

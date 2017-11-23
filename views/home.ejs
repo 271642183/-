@@ -1,0 +1,124 @@
+<%- include('components/header') %>
+<link rel="stylesheet" type="text/css" href="/css/home.css">
+<div class="banner">
+	<div class="swiper-container ban-swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide slide-1">
+				<div class="text-cnt">
+					<h2>致远任重，敦本务实</h2>
+					<p>勤礼莫如致敬，尽力莫如敦笃 —— 《左传·公成十三年》</p>
+				</div>
+
+			</div>
+			<div class="swiper-slide slide-2">
+				<div class="text-cnt">
+					<h2>专注</h2>
+					<p>令人难以置信胜诉率奇迹，源自每一次庭审都全力以赴。法庭，是我们的主战场，胜败越执着，锋锐越难当。</p>
+				</div>
+			</div>
+			<div class="swiper-slide slide-3">
+				<div class="text-cnt">
+					<h2>专注</h2>
+					<p>令人难以置信胜诉率奇迹，源自每一次庭审都全力以赴。法庭，是我们的主战场，胜败越执着，锋锐越难当。</p>
+				</div>
+			</div>
+
+		</div>
+		<div  class="ban-pagination swiper-pagination"></div>
+	</div>
+
+</div>
+
+<div class="item clearfloat">
+	<div class="container">
+		<div class="md case">
+			<img src="/img/case.jpg" alt="经典案例">
+			<div class="cnt">
+				<h3><a href="/cases/">经典案例</a></h3>
+				<p>经典案例大致叙述-经典案例大致叙述-经典案例大致叙述-经典案例大致叙述-经典案例大致叙述-</p>
+				<div class="more clearfloat">
+					<a href="/cases/">more></a>
+				</div>
+			</div>
+		</div>
+		<div class="md work-flow">
+			
+			<div class="mask">
+				<a href="/workFlow/">案件审查流程</a>
+			</div>
+		</div>
+	</div>
+	<div class="container work-class">
+		<div class="term"><a href="/workClass/#0" >企业风险管理</a></div>
+		
+		<div class="term"><a href="/workClass/#1" >合同纠纷处理</a></div>
+		<div class="term"><a href="/workClass/#2" >公司法务</a></div>
+		<div class="term"><a href="/workClass/#3" >房地产纠纷法律服务</a></div>
+		<div class="term"><a href="/workClass/#4"  style="font-size: 16px;">房地产非诉法律服务业务</a></div>
+		<div class="term"><a href="/workClass/#5" >侵权法律</a></div>
+		<div class="term"><a href="/workClass/#6" >刑事辩护与诉讼</a></div>
+		<div class="term"><a href="/workClass/#7" >婚姻继承</a></div>
+		<div class="term"><a href="/workClass/#8" >劳动法业务</a></div>
+		<div class="term"><a href="/workClass/#9" >复杂案件解决</a></div>
+	</div>
+</div>
+<div class="item">
+	<div class="container">
+		<div class="cultural md">
+			
+		</div>
+		<div class="map md">
+			<link rel="stylesheet" href="/css/main1119.css"/>
+			<style type="text/css">
+				.info-title {
+					color: white;
+					font-size: 14px;
+					background-color:blue;
+					line-height: 26px;
+					padding: 0px 0 0 6px;
+					font-weight: lighter;
+					letter-spacing: 1px
+				}
+				.info-content {
+					font: 12px Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial;
+					padding: 4px;
+					color: #666666;
+					line-height: 23px;
+				}
+				.info-content img {
+					float: left;
+					margin: 3px;
+				}
+			</style>
+			<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.3&key=57a7a49cc8bdbef276a30d2c491a5e3a&plugin=AMap.AdvancedInfoWindow"></script>
+			<script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+			<div id="container"></div>
+
+			<script type="text/javascript">
+				var lnglat = [116.437074,40.00174];
+				var map = new AMap.Map('container', {
+					resizeEnable: true,
+					center: lnglat,
+					zoom: 15
+				});
+				var marker = new AMap.Marker({
+					position: lnglat
+				});
+				marker.setMap(map);
+
+				var content=/*'<div class="info-title">高德地图</div>*/'<div class="info-content">' +
+				'致敦律师事务所</div>';
+				var  infowindow1 = new AMap.AdvancedInfoWindow({
+					content: content,
+					asOrigin: false,
+					placeSearch: false,
+					offset: new AMap.Pixel(0, -30)
+				});
+				infowindow1.open(map,lnglat);
+			</script>
+		</div>
+	</div>
+	
+</div>
+
+<%- include('components/footer')%>

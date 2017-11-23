@@ -1,0 +1,90 @@
+<%- include('components/header') %>
+<link rel="stylesheet" type="text/css" href="/css/workClass.css">
+<div class="item">
+
+	<div class="banner"></div>
+
+	<div class="container">
+		<div id="bread-nav" class="bread-nav">
+			<span class="bread-span">首页</span>
+			<span class="bread-span">></span>
+			<span class="bread-span nav-active">业务范围</span>
+		</div>
+		<div class="work-class-navs">
+			<ul>
+				<li class="work-class-nav-tit">
+					业务范围
+				</li>
+				<% post.forEach(function (post,index) { %>
+				<li class="work-class-nav">
+					<a class="anchor" href="#<%= index %>"><%= post.title %></a>
+				</li>
+				<% }) %>	
+			</ul>
+		</div>
+		<div class="work-class-lists">
+			<ul>
+				<% post.forEach(function (post,index) { %>
+				<li id="<%= index %>" class="work-class-list">
+					<h2 class="clearfloat">
+						<%= post.title %>
+					</h2>
+					<div class="work-class-content"><%- post.content %></div>
+				</li>
+				<% }) %>			
+			</ul>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var strict = document.compatMode == 'CSS1Compat';
+	/**_m begin**/
+	var _m = {
+		//锚点平滑处理
+		//调用方式，例：$(".anchor").click(_m.anchor_smooth);
+		anchor_smooth: function() {
+			
+			var href = $(this).attr("href") || $(this).attr('data-href');
+			var pos = $(href).offset().top;
+			$("html,body").animate({
+				scrollTop: pos
+			}, 500);
+		},
+		// 判断元素是否在可视区
+		scroolToF: function(obj) {
+			
+			var viewTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop); //可见高度顶部
+			var viewBottom = document[strict ? 'documentElement' : 'body'].clientHeight + viewTop; //可见高度底部
+			var objTB = {
+				top: obj.offset().top,
+				bottom: obj.offset().top + obj.height()
+			};
+			return(objTB.top > viewTop && objTB.top < viewBottom) || (objTB.bottom > viewTop && objTB.bottom < viewBottom) || (objTB.top < viewTop && objTB.bottom > viewBottom)
+		}
+	};
+	$(".anchor").click(_m.anchor_smooth);
+	$(window).scroll(function(){
+		var ref = $('#bread-nav');
+		var refB = $('#footer')
+		var nav = $('.work-class-navs')
+		if(!_m.scroolToF(ref)){
+			if(!nav.hasClass('active')){
+				nav.addClass('active');
+			}		
+		}else if(_m.scroolToF(ref)){
+			if(nav.hasClass('active')){
+				nav.removeClass('active');
+			}
+		};
+		if(_m.scroolToF(refB)){
+			if(!nav.hasClass('activeB')){
+				nav.addClass('activeB');
+			}		
+		}else if(!_m.scroolToF(refB)){
+			if(nav.hasClass('activeB')){
+				nav.removeClass('activeB');
+			}
+		};
+	})
+</script>
+<%- include('components/footer') %>
