@@ -6,11 +6,14 @@
 	background-image: url(/img/ban-02.jpg);
 }
 .banner .slide-3{
-	background-image: url(/img/ban-03.jpg);
+	background-image: url(/img/ban-06.jpg);
+}
+.banner .slide-4{
+	background-image: url(/img/peo/0.jpg);
 }
 .banner .swiper-slide{
 	height: 100vh;
-	background-position: center;
+	background-position: top center;
 	background-size: cover;
 	background-color: #f9f9f9;
 }
@@ -35,6 +38,7 @@
 .ban-pagination .swiper-pagination-bullet{
 	width: 40px;
 	height: 4px;
+	background-color: #fff;
 	border-radius: 0;
 }
 .item{
@@ -173,16 +177,37 @@
 }
 .item .cultural{
 	width: 60%;
-
-	height: 300px;
-	background-image: url(/img/ban-01.jpg);
+	position: relative;
 	background-size: cover;
+}
+.item .cultural .swiper-slide img{
+	display: block;
+	width: 100%;
 }
 .item .map{
 	width: 40%;
-	height: 300px;
+	height: 480px;
 	position: relative;
 }
+.item .about{
+	background-color: #fff;
+	padding: 1rem 3rem;
+}
+.item .about h2{
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	text-align: center;
+	color: #444;
+}
+.item .about p{
+	font-size: 1.2rem;
+ 	line-height: 1.5em;
+ 	margin-bottom: 1rem;
+ 	text-indent: 2em;
+ 	color: #999;
+}
+
+
 
 
 @media screen and (max-width: 768px){
@@ -222,6 +247,10 @@
 		margin-right: 8px;
 		margin-top: 10px;
 		margin-bottom: 10px;
+	}
+	.item .map{
+		height: 360px;
+		position: relative;
 	}
 
 }
