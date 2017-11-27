@@ -17,6 +17,7 @@ module.exports = function(app){
 	app.use('/cases', require('./case'));
 	app.use('/workFlow', require('./workFlow'));
   app.use('/workClass', require('./workClass'));
+  app.use('/about', require('./about'));
 	// 404 page
   	app.use(function (req, res) {
     	if (!res.headersSent) {

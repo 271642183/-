@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	var banSwiper = new Swiper('.ban-swiper-container',{
-		autoplay: 3000,
+		autoplay: 2000,
 		pagination : '.ban-pagination',
 
 	});
