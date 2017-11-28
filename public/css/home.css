@@ -1,9 +1,9 @@
 /* banner */
 .banner .slide-1{	
-	background-image: url(/img/ban-03.jpg);
+	background-image: url(/img/ban-02.jpg);
 }
 .banner .slide-2{
-	background-image: url(/img/ban-02.jpg);
+	background-image: url(/img/ban-03.jpg);
 }
 .banner .slide-3{
 	background-image: url(/img/ban-06.jpg);
@@ -19,12 +19,12 @@
 }
 .banner .swiper-slide .text-cnt{
 	position: absolute;
-	bottom: 80px;
+	bottom: 60px;
 	color: #eee;
 	left: 40px;
 }
 .banner .swiper-slide .text-cnt h2{
-	font-size: 56px;
+	font-size: 36px;
 	line-height: 1.8em;
 }
 .banner .swiper-slide .text-cnt p{
@@ -181,6 +181,7 @@
 	position: relative;
 	background-size: cover;
 	background-image: url(/img/peo/0.jpg);
+	background-position: center;
 }
 
 .item .map{
@@ -234,5 +235,7 @@
 		height: 360px;
 		position: relative;
 	}
-
+	.item .cultural{
+		height: 300px;
+	}
 }
